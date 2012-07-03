@@ -23,10 +23,10 @@ As a comparison, do the following:
 
 5. rake db:rollback STEP=3
 
-6. Change just_lookup.rb to be an empty migration
+6. Change just_lookup.rb to be an empty migration OR add Item.reset_column_information at the end of that migration
 
 7. rake db:migrate
 
 You would now see that the mode column is filled with values.
 
-This shows just_lookup.rb should be related to the bug
+This shows just_lookup.rb should be related to the bug, and reset_column_information is not called for every migrations.
